@@ -27,26 +27,14 @@ export default function LandingPage() {
             <Link href="/" className="text-sm font-medium text-primary">
               Home
             </Link>
-            <Link href="/features" className="text-sm font-medium text-muted-foreground hover:text-primary">
+            <Link href="#features" className="text-sm font-medium text-muted-foreground hover:text-primary">
               Features
             </Link>
-            <Link href="/pricing" className="text-sm font-medium text-muted-foreground hover:text-primary">
+            <Link href="#pricing" className="text-sm font-medium text-muted-foreground hover:text-primary">
               Pricing
-            </Link>
-            <Link href="/about" className="text-sm font-medium text-muted-foreground hover:text-primary">
-              About
             </Link>
           </nav>
           <div className="flex items-center gap-4">
-            <Link
-              href="/login"
-              className="text-sm font-medium text-muted-foreground hover:text-primary hidden md:block"
-            >
-              Log in
-            </Link>
-            <Button asChild>
-              <Link href="/signup">Get Started</Link>
-            </Button>
           </div>
         </div>
       </header>
@@ -72,9 +60,6 @@ export default function LandingPage() {
                       <ArrowRight className="ml-2 h-4 w-4" />
                     </Link>
                   </Button>
-                  <Button size="lg" variant="outline" asChild>
-                    <Link href="/demo">See Demo</Link>
-                  </Button>
                 </div>
               </div>
               <div className="mx-auto lg:mx-0 relative">
@@ -92,7 +77,7 @@ export default function LandingPage() {
         </section>
 
         {/* Features Section */}
-        <section className="w-full py-12 md:py-24 lg:py-32">
+        <section id='features' className="w-full py-12 md:py-24 lg:py-32">
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
@@ -393,7 +378,7 @@ export default function LandingPage() {
         </section>
 
         {/* Pricing Section */}
-        <section className="w-full py-12 md:py-24 lg:py-32">
+        <section id='pricing' className=" w-full py-12 md:py-24 lg:py-32">
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
@@ -432,7 +417,7 @@ export default function LandingPage() {
                 </CardContent>
                 <div className="p-6 pt-0 mt-auto">
                   <Button className="w-full" variant="outline" asChild>
-                    <Link href="/signup">Get Started</Link>
+                    <Link href="/">Get Started</Link>
                   </Button>
                 </div>
               </Card>
@@ -479,7 +464,7 @@ export default function LandingPage() {
                 </CardContent>
                 <div className="p-6 pt-0 mt-auto">
                   <Button className="w-full" asChild>
-                    <Link href="/signup">Get Premium</Link>
+                    <Link href="/">Get Premium</Link>
                   </Button>
                 </div>
               </Card>
@@ -521,7 +506,7 @@ export default function LandingPage() {
                 </CardContent>
                 <div className="p-6 pt-0 mt-auto">
                   <Button className="w-full" variant="outline" asChild>
-                    <Link href="/signup">Get Business</Link>
+                    <Link href="/">Get Business</Link>
                   </Button>
                 </div>
               </Card>
@@ -538,22 +523,6 @@ export default function LandingPage() {
                 <p className="max-w-[900px] md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                   Join thousands of users who have already improved their financial health with FinSmart.
                 </p>
-              </div>
-              <div className="flex flex-col gap-2 min-[400px]:flex-row">
-                <Button size="lg" variant="secondary" asChild>
-                  <Link href="/signup">
-                    Get Started for Free
-                    <ArrowRight className="ml-2 h-4 w-4" />
-                  </Link>
-                </Button>
-                <Button
-                  size="lg"
-                  variant="outline"
-                  className="bg-transparent text-primary-foreground border-primary-foreground hover:bg-primary-foreground/10"
-                  asChild
-                >
-                  <Link href="/demo">See Demo</Link>
-                </Button>
               </div>
             </div>
           </div>

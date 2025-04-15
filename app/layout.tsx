@@ -9,7 +9,7 @@ const inter = Inter({ subsets: ["latin"] })
 export const metadata: Metadata = {
   title: "FinSmart - AI-Powered Financial Tracker",
   description: "Track, analyze, and optimize your finances with AI-powered insights",
-    generator: 'v0.dev'
+  generator: 'FinSmart'
 }
 
 export default function RootLayout({

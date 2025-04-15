@@ -148,14 +148,6 @@ export default function InsightsPage() {
                   <p className="text-muted-foreground">Personalized financial recommendations based on your data.</p>
                 </div>
                 <div className="flex gap-2">
-                  <Button variant="outline" size="sm">
-                    <RefreshCw className="mr-2 h-4 w-4" />
-                    Refresh Insights
-                  </Button>
-                  <Button size="sm">
-                    <BookmarkIcon className="mr-2 h-4 w-4" />
-                    Save All
-                  </Button>
                 </div>
               </div>
 
@@ -177,8 +169,7 @@ export default function InsightsPage() {
                   <Card key={insight.id} className="overflow-hidden">
                     <CardContent className="p-6 flex gap-4 items-start">
                       <div
-                        className={`rounded-full p-3 flex-shrink-0 ${
-                          insight.type === "alert"
+                        className={`rounded-full p-3 flex-shrink-0 ${insight.type === "alert"
                             ? "bg-rose-100 text-rose-700"
                             : insight.type === "opportunity"
                               ? "bg-emerald-100 text-emerald-700"
@@ -187,7 +178,7 @@ export default function InsightsPage() {
                                 : insight.type === "positive"
                                   ? "bg-emerald-100 text-emerald-700"
                                   : "bg-blue-100 text-blue-700"
-                        }`}
+                          }`}
                       >
                         <insight.icon className="h-5 w-5" />
                       </div>
@@ -200,8 +191,7 @@ export default function InsightsPage() {
                           <div className="flex items-center gap-2">
                             <span className="text-xs px-2 py-0.5 bg-muted rounded-full">{insight.category}</span>
                             <span
-                              className={`text-xs px-2 py-0.5 rounded-full ${
-                                insight.type === "alert"
+                              className={`text-xs px-2 py-0.5 rounded-full ${insight.type === "alert"
                                   ? "bg-rose-100 text-rose-700"
                                   : insight.type === "opportunity"
                                     ? "bg-emerald-100 text-emerald-700"
@@ -210,19 +200,13 @@ export default function InsightsPage() {
                                       : insight.type === "positive"
                                         ? "bg-emerald-100 text-emerald-700"
                                         : "bg-blue-100 text-blue-700"
-                              }`}
+                                }`}
                             >
                               {insight.type.charAt(0).toUpperCase() + insight.type.slice(1)}
                             </span>
                           </div>
                         </div>
                         <p className="text-sm text-muted-foreground">{insight.description}</p>
-                        <div className="flex gap-2 pt-2">
-                          <Button variant="outline" size="sm">
-                            Dismiss
-                          </Button>
-                          <Button size="sm">Take Action</Button>
-                        </div>
                       </div>
                     </CardContent>
                   </Card>

@@ -113,10 +113,6 @@ export default function GoalsPage() {
                   <h1 className="text-3xl font-bold tracking-tight">Savings Goals</h1>
                   <p className="text-muted-foreground">Track and manage your financial goals.</p>
                 </div>
-                <Button size="sm">
-                  <Plus className="mr-2 h-4 w-4" />
-                  New Goal
-                </Button>
               </div>
 
               <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
@@ -131,16 +127,6 @@ export default function GoalsPage() {
                             <CardTitle>{goal.name}</CardTitle>
                             <CardDescription>{goal.description}</CardDescription>
                           </div>
-                          <div className="flex gap-1">
-                            <Button variant="ghost" size="icon" className="h-8 w-8">
-                              <Edit className="h-4 w-4" />
-                              <span className="sr-only">Edit</span>
-                            </Button>
-                            <Button variant="ghost" size="icon" className="h-8 w-8">
-                              <Trash2 className="h-4 w-4" />
-                              <span className="sr-only">Delete</span>
-                            </Button>
-                          </div>
                         </div>
                       </CardHeader>
                       <CardContent className="flex-1">
@@ -148,13 +134,12 @@ export default function GoalsPage() {
                           <div className="flex justify-between items-center">
                             <span className="text-sm font-medium">Progress</span>
                             <span
-                              className={`text-sm font-medium ${
-                                percentage >= 75
-                                  ? "text-emerald-500"
-                                  : percentage >= 50
-                                    ? "text-amber-500"
-                                    : "text-rose-500"
-                              }`}
+                              className={`text-sm font-medium ${percentage >= 75
+                                ? "text-emerald-500"
+                                : percentage >= 50
+                                  ? "text-amber-500"
+                                  : "text-rose-500"
+                                }`}
                             >
                               {percentage}%
                             </span>
@@ -169,11 +154,6 @@ export default function GoalsPage() {
                           <div className="text-xs text-muted-foreground">Category: {goal.category}</div>
                         </div>
                       </CardContent>
-                      <CardFooter>
-                        <Button variant="outline" className="w-full">
-                          Add Funds
-                        </Button>
-                      </CardFooter>
                     </Card>
                   )
                 })}

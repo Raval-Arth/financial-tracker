@@ -121,20 +121,16 @@ export default function BudgetsPage() {
               <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
                 <div>
                   <h1 className="text-3xl font-bold tracking-tight">Budget Management</h1>
-                  <p className="text-muted-foreground">
+                  <p className="pt-2 text-muted-foreground">
                     Set and track your spending limits across different categories.
                   </p>
                 </div>
-                <Button size="sm">
-                  <Plus className="mr-2 h-4 w-4" />
-                  New Budget
-                </Button>
               </div>
 
               <Card className="mb-6">
                 <CardHeader>
                   <CardTitle>Budget Summary</CardTitle>
-                  <CardDescription>
+                  <CardDescription className="pt-2">
                     You're on track with 5 of 8 budgets this month. 3 budgets are currently over their limits.
                   </CardDescription>
                 </CardHeader>
@@ -142,19 +138,19 @@ export default function BudgetsPage() {
                   <div className="flex flex-col md:flex-row gap-4 md:gap-8 items-center justify-between">
                     <div className="flex flex-col items-center">
                       <span className="text-sm font-medium text-muted-foreground">Total Budget</span>
-                      <span className="text-2xl font-bold">$3,150.00</span>
+                      <span className="pt-2 text-2xl font-bold">$3,150.00</span>
                     </div>
                     <div className="flex flex-col items-center">
                       <span className="text-sm font-medium text-muted-foreground">Spent So Far</span>
-                      <span className="text-2xl font-bold">$2,840.00</span>
+                      <span className="pt-2 text-2xl font-bold">$2,840.00</span>
                     </div>
                     <div className="flex flex-col items-center">
                       <span className="text-sm font-medium text-muted-foreground">Remaining</span>
-                      <span className="text-2xl font-bold text-emerald-600">$310.00</span>
+                      <span className="pt-2 text-2xl font-bold text-emerald-600">$310.00</span>
                     </div>
                     <div className="flex flex-col items-center">
                       <span className="text-sm font-medium text-muted-foreground">Budget Health</span>
-                      <span className="text-2xl font-bold text-amber-500">Good</span>
+                      <span className="pt-2 text-2xl font-bold text-amber-500">Good</span>
                     </div>
                   </div>
                 </CardContent>
@@ -174,16 +170,6 @@ export default function BudgetsPage() {
                             <CardDescription>
                               {budget.category} • {budget.period}
                             </CardDescription>
-                          </div>
-                          <div className="flex gap-1">
-                            <Button variant="ghost" size="icon" className="h-8 w-8">
-                              <Edit className="h-4 w-4" />
-                              <span className="sr-only">Edit</span>
-                            </Button>
-                            <Button variant="ghost" size="icon" className="h-8 w-8">
-                              <Trash2 className="h-4 w-4" />
-                              <span className="sr-only">Delete</span>
-                            </Button>
                           </div>
                         </div>
                       </CardHeader>

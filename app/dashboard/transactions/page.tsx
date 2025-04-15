@@ -70,16 +70,6 @@ export default function TransactionsPage() {
                   <h1 className="text-3xl font-bold tracking-tight">Transactions</h1>
                   <p className="text-muted-foreground">View and manage all your financial transactions.</p>
                 </div>
-                <div className="flex gap-2">
-                  <Button variant="outline" size="sm">
-                    <Download className="mr-2 h-4 w-4" />
-                    Export
-                  </Button>
-                  <Button size="sm">
-                    <Plus className="mr-2 h-4 w-4" />
-                    Add Transaction
-                  </Button>
-                </div>
               </div>
 
               <Card>
